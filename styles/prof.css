@@ -1,0 +1,22 @@
+ul {
+    display: none;
+}
+
+input:checked~ul {
+    display: block;
+}
+
+input {
+    display: none;
+}
+
+nav {
+    display: flex;
+}
+
+li {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0;
+}

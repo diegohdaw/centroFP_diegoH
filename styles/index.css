@@ -1,0 +1,346 @@
+@import "basic.css";
+
+:root {
+    --borde-link: 3px;
+    --pad-mar: 15px;
+    --pp-cont: 90%;
+    --brd-ttarj: 2px;
+}
+
+body {
+    background-color: var(--bgcolor-blue);
+    background: url(../images/fondo_lib.jpg) no-repeat bottom;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/*-------------- Version escritorio --------------*/
+/*Cabecera header*/
+header {
+    height: var(--spcnav-cab);
+    align-items: center;
+    justify-content: space-between;
+    flex-basis: 50px auto 20px;
+    padding-right: 5px;
+}
+
+header img {
+    height: 30px;
+    margin: 3px;
+}
+
+.icono {
+    justify-self: end;
+}
+
+header>#mostrar {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+}
+
+li>a {
+    margin-left: 10px;
+    font-size: var(--snav-font);
+    color: var(--white);
+    font-family: 'Open Sans';
+}
+
+header nav>ul>li>a:hover {
+    border-bottom: 4px solid var(--light-blue);
+}
+
+/*---------------Cuerpo main---------------*/
+/*Título*/
+main {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#contenedor {
+    width: var(--wdt-body);
+    display: flex;
+    justify-content: center;
+    background-color: aquamarine;
+}
+
+#contenedor>figure#titulo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: beige;
+    height: 200px;
+    width: 100%;
+    background: url("https://cdn.pixabay.com/photo/2015/12/01/15/43/black-1072366_960_720.jpg") no-repeat center;
+    background-size: cover;
+}
+
+#contenedor>figure>h2 {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Comfortaa';
+    font-size: 3em;
+    font-weight: bold;
+    color: var(--white);
+}
+
+#contenedor>figure>p {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Poiret One';
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--white);
+}
+/*-----------------oferta educativa*/
+#oferta {
+    width: 90%;
+    padding: 0 10px 10px;    
+    background-color: var(--col-foft);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#oferta>h2 {
+    font-family: 'Comfortaa';
+    margin: var(--pad-mar) 0;
+    padding: 1%;
+    background-color: var(--sweet-gray);
+    border-top: var(--brd-ttarj) solid var(--blue-underline);
+    border-bottom: var(--brd-ttarj) solid var(--blue-underline);
+}
+
+#oferta>#cursos {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "primaria"
+    "secundaria"
+    "grad_sup"
+    "grad_med";
+}
+#oferta>#cursos>article:nth-of-type(1){
+    grid-area: primaria;
+}
+#oferta>#cursos>article:nth-of-type(2){
+    grid-area: secundaria;
+}
+#oferta>#cursos>article:nth-of-type(3){
+    grid-area: grad_sup;
+}
+#oferta>#cursos>article:nth-of-type(4){
+    grid-area: grad_med;
+}
+
+#oferta>#cursos>article {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    background-color: var(--sweet-gray);
+    border-radius: 10px;
+    padding: var(--pad-mar);
+    margin-bottom: 20px;
+}
+
+#oferta>#cursos>article>h3 {
+    color: var(--col-fiof);
+    margin-bottom: var(--pad-mar);
+    font-family: 'Comfortaa';
+    font-weight: bold;
+    font-size: 1.6em;
+    border-bottom: var(--brd-ttarj) solid var(--blue-underline);
+    border-left: var(--brd-ttarj) solid var(--blue-underline);
+    padding-left: 2px;
+    border-bottom-left-radius: 8px;
+}
+
+#oferta>#cursos>article>p {
+    
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: justify;
+}
+
+/*-----------------objetivos*/
+#objetivos {
+    background-color: rgba(255, 255, 255, 0.938);
+    width: 100%;
+    padding: 0 10px 10px;    
+    /* background-color: var(--col-foft); */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#objetivos>#mmv {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row: 1fr 1fr 1fr;
+    grid-template-areas: "mision"
+    "vision"
+    "valores";    
+}
+#objetivos>#mmv>section:nth-of-type(1){
+    grid-area: mision;
+}
+#objetivos>#mmv>section:nth-of-type(2){
+    grid-area: vision;
+}
+#objetivos>#mmv>section:nth-of-type(3){
+    grid-area: valores;
+}
+#mmv>section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--pad-mar) 2%;
+    border-left: var(--brd-ttarj) solid var(--blue-underline);
+    border-right: var(--brd-ttarj) solid var(--blue-underline);
+}
+
+#mmv>section>h3 {
+    padding-bottom: var(--brd-ttarj);
+    font-family: 'Comfortaa';
+    font-weight: bold;
+}
+
+#mmv>section>p {
+    text-align: justify;
+    font-family: 'Comfortaa';
+    font-weight: bold;
+    border-top: var(--brd-ttarj) solid var(--hard-green);
+    padding: var(--brd-ttarj) var(--brd-ttarj) 0;
+}
+/*-----------------footer*/
+footer{
+    padding-top: var(--snav-font);
+    background-color:var(--col-foot);
+    justify-content: center;
+}
+#cont_foot{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row: 1fr 1fr 1fr;
+    grid-template-areas: "noticias"
+    "soporte"
+    "contacto"; 
+}
+
+footer>#cont_foot>section:nth-of-type(1){
+    grid-area: noticias;
+}
+footer>#cont_foot>section:nth-of-type(2){
+    grid-area: soporte;
+}
+footer>#cont_foot>section:nth-of-type(3){
+    grid-area: contacto;
+}
+#cont_foot>section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 4px solid var(--blue-underline);
+    margin-bottom: var(--snav-font);
+    padding-bottom: var(--snav-font);
+}
+#cont_foot>section>ul{
+    display: flex;
+    flex-direction: column;
+}
+#cont_foot>section h3 {
+    font-family: 'Open Sans';
+    font-weight: bold;
+    padding-bottom: var(--pad-mar);
+    text-transform: uppercase;
+    color: white;
+}
+#cont_foot>section a,
+#cont_foot>section label {
+    font-family: 'Comfortaa';
+    color: white;
+}
+
+#cont_foot>section a:hover,
+#cont_foot>section a:focus {
+    color: var(--light-blue);
+}
+
+@media screen and (min-width: 853px) {
+    .icono {
+        display: none;
+    }
+    #oferta>#cursos {
+        justify-content: space-between;
+        grid-template-columns: .49fr .49fr;
+        grid-row: 1fr 1fr;
+        grid-template-areas: "primaria secundaria"
+        "grad_sup grad_med";
+    }
+    #objetivos>#mmv {
+        justify-content: space-between;
+        grid-template-columns: 32% 32% 32%;
+        grid-row: 1fr;
+        grid-template-areas: "mision vision valores";
+    }
+    footer>#cont_foot{
+        width: var(--wdt-body);
+        justify-content: space-between;
+        grid-template-columns: 32% 32% 32%;
+        grid-row: 1fr;
+        grid-template-areas: "noticias soporte contacto"; 
+    }
+    footer>#cont_foot>section{
+        border-bottom: 0;        
+    }
+}
+
+@media screen and (max-width: 852px) {
+    nav {
+        position: relative;
+        top: var(--navcol-cab);
+        right: -30px;
+    }
+
+    #ocultar {
+        visibility: hidden;
+    }
+
+    .icono {
+        font-size: var(--snav-font);
+        color: var(--white);
+    }
+
+    .icono>a {
+        font-size: 30px;
+    }
+
+    .icono>a:hover {
+        color: var(--light-blue);
+    }
+
+    nav>ul {
+        display: flex;
+        flex-direction: column;
+        background-color: whitesmoke;
+        padding-bottom: 5px;
+    }
+
+    li>a {
+        color: black;
+        padding-right: 3px;
+    }
+    
+}

@@ -1,0 +1,110 @@
+@import "basic.css";
+
+html,
+body {
+    height: 95.5%;
+}
+
+#grp_ab {
+    display: grid;
+    justify-items: center;
+    width: 60%;
+    height: 60%;
+    background-color: var(--grad-blue);
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 10% auto;
+    grid-template-areas: "alta baja""formulario formulario";
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    background-color: brown;
+    width: 90%;
+    height: fit-content;
+    grid-area: formulario;
+    align-self: center;
+    padding: .8em;
+    background-color: var(--col-foft);
+}
+
+#fr_b {
+    display: none;
+}
+
+label {
+    font-size: 1.3em;
+    margin-top: .7em;
+}
+
+#btn_alta {
+    grid-area: alta;
+}
+
+#btn_baja {
+    grid-area: baja;
+}
+
+
+button {
+    background-color: var(--middle-blue);
+    width: 100%;
+    height: 100%;
+    font-size: 1.5em;
+    text-transform: capitalize;
+    color: var(--white);
+    border: 1px solid var(--middle-blue);
+}
+
+button:hover {
+    border-bottom: 3px solid var(--middle-blue);
+    outline: none;
+    outline-width: 0;
+    box-shadow: none;
+    background-color: var(--white);
+    color: var(--middle-blue);
+    border: 1px solid var(--middle-blue);
+}
+
+button:focus,
+button:active {
+    border-bottom: 3px solid var(--white);
+    outline: none;
+    outline-width: 0;
+    box-shadow: none;
+    background-color: var(--white);
+    color: var(--middle-blue);
+    border: 1px solid var(--middle-blue)
+}
+
+.grp_sel {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 1.9em;
+}
+
+select {
+    width: 100%;
+    font-size: 1.2em;
+}
+
+#add_mod {
+    width: 40%;
+    font-size: 1.2em;
+}
+
+input[type=text] {
+    font-size: 1.2em;
+}
+
+.btn_accion {
+    height: 1.5em;
+}
+
+@media screen and (min-width: 852px) {
+
+    html,
+    body {
+        height: 94.5%;
+    }
+}

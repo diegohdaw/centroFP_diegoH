@@ -1,0 +1,86 @@
+/*---------Fuentes---------*/
+@import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap');
+
+
+/*---------Colores---------*/
+:root {
+    --black: black;
+    --white: white;
+    --light-blue: rgba(147, 185, 243, 0.705);
+    --bgcolor-blue: rgba(150, 189, 247, 0.274);
+    --light-gray: rgba(255, 255, 255, .75);
+    --white-brd: rgb(250, 253, 253);
+
+    --grad-blue: rgba(170, 202, 250, 0.582);
+    --grad-body: rgba(170, 186, 209, 0);
+
+    --middle-blue: rgb(52, 122, 226);
+    --hard-blue: rgba(41, 90, 180, 0.438);
+    --solid-blue: rgb(35, 70, 136);
+    --light-green: rgba(41, 180, 150, 0.534);
+    --hard-green: rgba(18, 80, 66, 0.623);
+
+    --sweet-gray: rgba(177, 181, 185, 0.884);
+
+    --blue-underline: rgba(3, 4, 71, 0.897);
+    --sweet-mag: rgba(114, 59, 202, 0.185);
+    --col-foot: rgb(92, 116, 138);
+    --col-foft:rgba(228, 235, 241, 0.603);
+    --col-fiof:rgb(128, 5, 72);
+    --col-lblog:rgb(63, 131, 103);
+
+    --snav-font: 1.3em;
+    --btn-home: 1em;
+    --sfot-font: 20px;
+    --snav-font: 1.2em;
+    --spcnav-cab: 50px;
+    --navcol-cab: 95px;
+    --wdt-body: 90%;
+    --prt-mnlog: 90%;
+}
+
+/* Rules for icon sizes: */
+.material-icons.md-18 {
+    font-size: 18px;
+}
+
+.material-icons.md-24 {
+    font-size: 24px;
+}
+
+/*Default*/
+.material-icons.md-36 {
+    font-size: 36px;
+}
+
+.material-icons.md-48 {
+    font-size: 48px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    display: flex;
+    background-color: var(--solid-blue);
+}
+
+main {
+    display: flex;
+}
+
+footer{
+    display: flex;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}

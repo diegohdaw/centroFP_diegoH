@@ -1,0 +1,200 @@
+@import "basic.css";
+
+html,
+body {
+    height: 95.5%;
+}
+/*--------------------------- Cabecera */
+header {
+    height: var(--spcnav-cab);
+    align-items: center;
+    justify-content: space-between;
+    flex-basis: 50px auto 20px;
+    padding-right: 5px;
+}
+
+header img {
+    height: var(--snav-font);
+    margin: 3px;
+}
+
+header h3 {
+    font-size: var(--snav-font);
+    color: var(--white);
+    font-family: 'Open Sans';
+}
+
+header>#home {
+    background-color: var(--col-lblog);
+    color: white;
+    border-radius: 8px;
+}
+/*--------------------------- Figura y login */
+main {
+    background-color: var(--grad-blue);
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+main>figure {
+    display: none;
+}
+
+ul {
+    list-style: none;
+}
+
+#contenido {
+    display: flex;
+    width: var(--wdt-body);
+    flex-direction: column;
+}
+
+#contenido>h2 {
+    margin: 3% 0;
+    display: flex;
+    justify-content: center;
+}
+
+#contenido>form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contenido>form>ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+#contenido>form>ul>li {
+    display: flex;
+    width: var(--prt-mnlog);
+    align-items: center;
+    justify-content: center;
+}
+
+#contenido>form>ul>li>input, input[type=text] {
+    width: 100%;
+    border-bottom: 2px solid var(--black);
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    font-size: 120%;
+    height: 100%;
+    flex-grow: 2;
+}
+
+#contenido>form>input {
+    width: var(--prt-mnlog);
+}
+
+li input:hover,
+li input:focus {
+    border-bottom: 3px solid var(--middle-blue);
+    outline: none;
+    outline-width: 0;
+    box-shadow: none;
+}
+
+input[type="submit"] {
+    background-color: var(--middle-blue);
+    width: 60%;
+    height: 100%;
+    font-size: 150%;
+    text-transform: capitalize;
+    border-radius: 4px;
+    color: var(--white);
+    margin-bottom: 1%;
+    border: 1px solid var(--middle-blue);
+    align-self: center;
+}
+
+input[type="submit"]:hover,
+input[type="submit"]:focus {
+    background-color: var(--white);
+    color: var(--middle-blue);
+    border: 1px solid var(--middle-blue);
+}
+
+#contenido>#enlaces {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+#contenido>#enlaces>a {
+    justify-self: center;
+    width: var(--prt-mnlog);
+}
+
+#enlaces a:hover,
+#enlaces a:focus {
+    text-decoration: underline;
+}
+/*--------------------------- Pie de pagina */
+footer {
+    background-color: var(--hard-blue);
+    display: flex;
+    justify-content: space-evenly;
+}
+
+footer a {
+    text-align: center;
+    padding: 1% 0;
+    margin: 0 1%;
+}
+
+footer a:hover,
+footer a:focus {
+    text-decoration: underline;
+}
+
+@media screen and (min-width: 852px) {
+
+    html,
+    body {
+        height: 94.3%;
+    }
+
+    main {
+        display: flex;
+    }
+
+    figure {
+        width: 70%;
+        height: 100%;
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        background: linear-gradient(var(--light-gray), var(--light-gray)), url("../images/portada_az.jpg") no-repeat center;
+        z-index: 0;
+        background-size: cover;
+    }
+
+    main figure h2,
+    main figure p {
+        display: flex;
+        color: var(--black);
+        margin-bottom: 2%;
+        padding: 0 3%;
+        font-size: 1.2em;
+        text-align: center;
+    }
+
+    main figure h2 {
+        font-size: 2em;
+        font-style: italic;
+    }
+
+    main img {
+        width: 40%;
+        height: 400px;
+    }
+    
+}
