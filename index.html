@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centro FP</title>
+    <!-- <script src="script/index.js"></script> -->
+    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            cerrarMenu();
+            window.addEventListener("resize", () => {
+                if (window.innerWidth < 853) {
+                    cerrarMenu();
+                }
+            });
+            window.addEventListener("scroll", () => {
+                cerrarMenu();
+            });
+        });
+
+        function cerrarMenu() {
+            if (document.getElementById("mostrar") != null) {
+                document.getElementById("mostrar").id = "ocultar";
+            }
+        }
+
+        function mostrarOcultar() {
+            if (document.getElementById("mostrar") != null) {
+                document.getElementById("mostrar").id = "ocultar";                
+            } else {                
+                document.getElementById("ocultar").id = "mostrar";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <a id="enl_home" href="index.html"><img src="images/logofb.png" alt="icono_web"></a>
+
+        <nav id="mostrar">
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Oferta educativa</a></li>
+                <li><a href="#">Quienes somos</a></li>
+                <li><a href="#">Contacto</a></li>
+                <li><a href="login.html" id="login">Login</a></li>
+            </ul>
+        </nav>
+
+        <label class="icono"><a href="#" class="icono fa fa-bars" onclick="mostrarOcultar()"></a></label>
+    </header>
+    <main>
+        <!-- <img src="https://cdn.pixabay.com/photo/2015/12/01/15/43/black-1072366_960_720.jpg" alt="img_instituto" > -->
+        <div id="contenedor">
+            <figure id="titulo">
+                <h2>Instituto</h2>
+                <p>centro de educación primaria, secundaria y FP</p>
+            </figure>
+        </div>
+        <div id="oferta">
+            <h2>OFERTA EDUCATIVA</h2>
+            <div id="cursos">
+                <article>
+                    <h3>Primaria</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis dignissimos tempora dolore
+                        totam nam illum distinctio vitae veritatis ut dolorum natus velit provident hic reprehenderit
+                        maxime ipsa deleniti optio culpa perferendis laudantium sit nostrum quam. Nulla, possimus.</p>
+                </article>
+                <article>
+                    <h3>Secundaria</h3>
+                    <p>Lorem, ipsum dm perspiciatis, molestias suscipit dolorem vel. Incidunt nemo voluptate aut tenetur
+                        temporibus sed, minima nulla, animi architecto consequatur unde quod aliquam reprehenderit
+                        maxime ipsa deleniti optio culpa perferendis laudantium sit nostrum quam. Nulla, possimus.</p>
+                </article>
+                <article>
+                    <h3>Grado Superior</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis dignissimos tempora dolore
+                        totam nam illum distinctio vitae veritatis ut dolorum natus velit provident hic, eius eligendi.
+                        Labore earum necessitatibus debitis voluptatum itaque asperiores, nihil aspernatur. Maxime
+                        dolor, a corrupti ullam odio quos deserunt, venderit maxime ipsa deleniti optio culpa
+                        perferendis laudantium sit nostrum quam. Nulla, possimus. Lorem ipsum dolor sit amet,
+                        consectetur adipisicing elit. Nesciunt atque nostrum natus tempora odit eligendi dignissimos
+                        incidunt asperiores, nob</p>
+                </article>
+                <article>
+                    <h3>Grado Medio</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis dignissimos tempora dolore
+                        totam nam illum distinctio vitae veritatis ut dolorum natus velit providentlias ducimus. Ipsam,
+                        illo! Molestiae quasi ipsum magni cum natus, ipsa praesentium aspernatur voluptas cupiditate
+                        quisquam perspiciatis, molestias suscipit dolorem vel. Incidunt nemo voluptate aut tenetur
+                        temporibus sed, minima nulla, animi architecto consequatur unde quod aliquam reprehenderit
+                        maxime ipsa deleniti optio culpa perferendis laudantium sit nostrum quam. Nulla, possimus.</p>
+                </article>
+            </div>
+        </div>
+        <div id="objetivos">
+            <div id="mmv">
+                <section>
+                    <h3>Mision</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum praesentium deleniti tempore nisi
+                        a cupiditate officiis maxime aut laborum asperiores?</p>
+                </section>
+                <section>
+                    <h3>Visión</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum praesentium deleniti tempore nisi
+                        a cupiditate officiis maxime aut laborum asperiores?</p>
+                </section>
+                <section>
+                    <h3>Valores</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum praesentium deleniti tempore nisi
+                        a cupiditate officiis maxime aut laborum asperiores?</p>
+                </section>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div id="cont_foot">
+            <section>
+                <h3>Últimas noticias</h3>
+                <ul>
+                    <li><a href="#">Empieza el curso</a></li>
+                    <li><a href="#">Semana de la tecnología</a></li>
+                    <li><a href="#">Cursos avanzados</a></li>
+                </ul>
+            </section>
+            <section>
+                <h3>Ayuda y soporte</h3>
+                <ul>
+                    <li><a href="#">Preguntas frecuentes</a></li>
+                    <li><a href="#">Soporte técnico</a></li>
+                    <li><a href="#">Publicitate</a></li>
+                </ul>
+            </section>
+            <section>
+                <h3>Contacto</h3>
+                <ul>
+                    <li><label>Dir: C/ Plaza Mayor, 23</label></li>
+                    <li><label>CP: 09004-Burgos</label></li>
+                    <li><label>Teléfono: </label><a href="tel:+">947 85 95 87</a></li>
+                    <li><label>Email: </label><a href="mailto:">colegio@mail.com</a> </li>
+                </ul>
+            </section>
+        </div>
+    </footer>
+</body>
+
+</html>

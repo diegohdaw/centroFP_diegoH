@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrador</title>
+    <link rel="stylesheet" href="styles/login.css">
+    <link rel="stylesheet" href="styles/admin.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            document.getElementById("btn_alta").addEventListener("click", () => {
+                document.getElementById("fr_a").style.display = "flex"
+                document.getElementById("fr_b").style.display = "none"
+            });
+            document.getElementById("btn_baja").addEventListener("click", () => {
+                document.getElementById("fr_b").style.display = "flex"
+                document.getElementById("fr_a").style.display = "none"
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <header>
+        <a id="enl_home" href="index.html"><img src="images/logofb.png" alt="icono_web"></a>
+        <h3>Adminstrador</h3>
+        <a href="index.html" id="home"><i class="material-icons md-36">logout</i></a>
+    </header>
+    <main>
+        <div id="grp_ab">
+            <button type="submit" id="btn_alta">Alta</button>
+            <button type="submit" id="btn_baja">Baja</button>
+            <form action="#" method="post" id="fr_a">
+                <div class="grp_tipo">
+                    <label>Tipo: </label>
+                    <input type="radio" id="fra_prof" name="tipo" value="prof">
+                    <label for="fra_prof">Profesor</label>
+
+                    <input type="radio" id="fra_alum" name="tipo" value="alum">
+                    <label for="fra_alum">Alumno</label>
+                </div>
+                <label for="fr_nom">Nombre: </label><input type="text" name="nombre" id="fr_nom">
+                <label for="fr_ape">Apellido: </label><input type="text" name="apellido" id="fr_ape">
+                <label>Módulos</label>
+                <div class="grp_sel">
+                    <select name="modulo">
+                        <option value="cli">Cliente</option>
+                        <option value="acs">Acceso a datos</option>
+                        <option value="ser">Servidor</option>
+                        <option value="itf">Interfaces</option>
+                        <option value="emp">Emresa</option>
+                    </select>
+                    <button type="button" id="add_mod">Agregar modulo</button>
+                </div>
+                <button onclick="location.href = 'login.html';" type="button" class="btn_accion">Añadir usuario</button>
+            </form>
+            
+            <form action="#" method="post" id="fr_b">
+                <div class="grp_tipo">
+                    <label>Tipo: </label>
+                    <input type="radio" id="frb_prof" name="tipo" value="prof">
+                    <label for="frb_prof">Profesor</label>
+
+                    <input type="radio" id="frb_alum" name="tipo" value="alum">
+                    <label for="frb_alum">Alumno</label>
+                </div>
+                <label>Usuarios:</label>
+                <div class="grp_sel">
+                    <select name="modulo">
+                        <option value="al1">Alumno/Profesor 1</option>
+                        <option value="al2">Alumno/Profesor 2</option>
+                        <option value="al3">Alumno/Profesor 3</option>
+                        <option value="al4">Alumno/Profesor 4</option>
+                        <option value="al5">Alumno/Profesor 5</option>
+                    </select>
+                </div>
+                <button onclick="location.href = 'login.html';" type="button" class="btn_accion">Borrar Usuario</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <a href="#">Mapa del sitio</a>
+        <a href="#">Quienes somos</a>
+        <a href="#">Contacto</a>
+        <a href="#">Patrocinadores</a>
+    </footer>
+</body>
+
+</html>
